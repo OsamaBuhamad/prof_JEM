@@ -26,4 +26,23 @@ public class Student implements CourseListener{
 		this.midterm = date;
 		System.out.println(name + " : Alright! I get to party since my midterm isn't until " + this.midterm);
 	}
+
+	@Override
+	public void midtermAnnounced(CourseEvent e) {
+		// TODO Auto-generated method stub
+		this.study(e.midtermDate);
+		
+	}
+
+	@Override
+	public void assignmentPostponed(CourseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void midtermPostponed(CourseEvent e) {
+		// TODO Auto-generated method stub
+		this.party(e.assignmentDeadline);
+	}
 }
