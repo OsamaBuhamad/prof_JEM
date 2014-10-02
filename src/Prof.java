@@ -38,7 +38,9 @@ public class Prof {
 		}
 		ta.proctor(date);
 		*/
-		CourseEvent e = new CourseEvent(this);
+		boolean set = true;
+		CourseEvent e = new CourseEvent(this, set, midtermDate);
+		
 		for (CourseListener cl: courseListeners) {
 			cl.midtermAnnounced(e);
 		}
